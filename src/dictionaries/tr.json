@@ -1,0 +1,98 @@
+{
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "retry": "Tekrar Dene",
+    "close": "Kapat",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "submit": "Gönder",
+    "search": "Ara",
+    "readMore": "Devamını Oku",
+    "learnMore": "Daha Fazla Bilgi"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "about": "Hakkımızda",
+    "sustainability": "Sürdürülebilirlik",
+    "contact": "İletişim",
+    "language": "Dil"
+  },
+  "hero": {
+    "title": "Sürdürülebilir Ambalaj Çözümleri",
+    "subtitle": "Geleceği Düşünen Ambalaj",
+    "description": "Çevre dostu ve geri dönüştürülebilir ambalaj ürünleriyle doğayı koruyoruz. Kaliteli, sürdürülebilir ve yenilikçi çözümlerimizle işinizi geleceğe taşıyın.",
+    "cta": "Ürünlerimizi Keşfedin",
+    "ctaSecondary": "İletişime Geçin"
+  },
+  "products": {
+    "title": "Ürün Kategorilerimiz",
+    "subtitle": "Her ihtiyaca uygun sürdürülebilir ambalaj çözümleri",
+    "viewAll": "Tüm Ürünleri Görüntüle",
+    "categories": {
+      "food": "Gıda Ambalajı",
+      "industrial": "Endüstriyel Ambalaj",
+      "medical": "Medikal Ambalaj",
+      "cosmetic": "Kozmetik Ambalajı"
+    }
+  },
+  "sustainability": {
+    "title": "Sürdürülebilirlik Taahhüdümüz",
+    "subtitle": "Çevre dostu üretim süreçleri ve geri dönüştürülebilir malzemeler",
+    "recyclable": {
+      "title": "%100 Geri Dönüştürülebilir",
+      "description": "Tüm ürünlerimiz geri dönüştürülebilir malzemelerden üretilir"
+    },
+    "biodegradable": {
+      "title": "Biyolojik Olarak Parçalanabilir",
+      "description": "Doğada kendiliğinden parçalanan çevre dostu malzemeler"
+    },
+    "carbonNeutral": {
+      "title": "Karbon Nötr Üretim",
+      "description": "Üretim süreçlerimizde sıfır karbon emisyonu hedefliyoruz"
+    }
+  },
+  "about": {
+    "title": "Gampaş Ambalaj Hakkında",
+    "description": "1985 yılından bu yana ambalaj sektöründe öncü olan Gampaş, sürdürülebilir ve yenilikçi çözümler sunmaktadır.",
+    "mission": "Misyonumuz",
+    "vision": "Vizyonumuz",
+    "values": "Değerlerimiz"
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "subtitle": "Sorularınız için bize ulaşın",
+    "form": {
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "company": "Şirket",
+      "message": "Mesajınız",
+      "submit": "Mesaj Gönder",
+      "success": "Mesajınız başarıyla gönderildi!",
+      "error": "Mesaj gönderilirken bir hata oluştu."
+    },
+    "info": {
+      "address": "Adres",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "workingHours": "Çalışma Saatleri"
+    }
+  },
+  "footer": {
+    "company": "Gampaş Ambalaj",
+    "description": "Sürdürülebilir ambalaj çözümlerinde lider şirket",
+    "quickLinks": "Hızlı Bağlantılar",
+    "followUs": "Bizi Takip Edin",
+    "copyright": "© 2024 Gampaş Ambalaj. Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları"
+  },
+  "seo": {
+    "home": {
+      "title": "Gampaş Ambalaj - Sürdürülebilir Ambalaj Çözümleri",
+      "description": "Çevre dostu ve geri dönüştürülebilir ambalaj ürünleri. Kaliteli, sürdürülebilir ve yenilikçi ambalaj çözümleri için Gampaş Ambalaj."
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try Again",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "search": "Search",
+    "readMore": "Read More",
+    "learnMore": "Learn More"
+  },
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "sustainability": "Sustainability",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Sustainable Packaging Solutions",
+    "subtitle": "Future-Thinking Packaging",
+    "description": "We protect nature with eco-friendly and recyclable packaging products. Take your business to the future with our quality, sustainable and innovative solutions.",
+    "cta": "Explore Our Products",
+    "ctaSecondary": "Get In Touch"
+  },
+  "products": {
+    "title": "Our Product Categories",
+    "subtitle": "Sustainable packaging solutions for every need",
+    "viewAll": "View All Products",
+    "categories": {
+      "food": "Food Packaging",
+      "industrial": "Industrial Packaging",
+      "medical": "Medical Packaging",
+      "cosmetic": "Cosmetic Packaging"
+    }
+  },
+  "sustainability": {
+    "title": "Our Sustainability Commitment",
+    "subtitle": "Eco-friendly production processes and recyclable materials",
+    "recyclable": {
+      "title": "100% Recyclable",
+      "description": "All our products are made from recyclable materials"
+    },
+    "biodegradable": {
+      "title": "Biodegradable",
+      "description": "Eco-friendly materials that decompose naturally"
+    },
+    "carbonNeutral": {
+      "title": "Carbon Neutral Production",
+      "description": "We aim for zero carbon emissions in our production processes"
+    }
+  },
+  "about": {
+    "title": "About Gampaş Packaging",
+    "description": "Since 1985, Gampaş has been a pioneer in the packaging industry, offering sustainable and innovative solutions.",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "values": "Our Values"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Contact us for your questions",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred while sending the message."
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "workingHours": "Working Hours"
+    }
+  },
+  "footer": {
+    "company": "Gampaş Packaging",
+    "description": "Leading company in sustainable packaging solutions",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "copyright": "© 2024 Gampaş Packaging. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "seo": {
+    "home": {
+      "title": "Gampaş Packaging - Sustainable Packaging Solutions",
+      "description": "Eco-friendly and recyclable packaging products. Quality, sustainable and innovative packaging solutions from Gampaş Packaging."
+    }
+  }
+}
