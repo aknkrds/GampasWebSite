@@ -10,7 +10,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { toast } from 'sonner';
 import { MapPin, Phone, Mail, Clock, Upload, X } from 'lucide-react';
-import { buildMeta } from '@/lib/seo';
+
 import { trackEvent } from '@/lib/analytics';
 import { getProductFamilies, getSectorSolutions } from '@/lib/cms';
 import type { ProductFamily, SectorSolution } from '@/types/cms';

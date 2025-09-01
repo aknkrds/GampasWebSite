@@ -17,7 +17,7 @@ export const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
 export async function getDictionary(locale: Locale): Promise<Dictionary> {
   try {
     return await dictionaries[locale]();
-  } catch (error) {
+  } catch {
     console.warn(`Failed to load dictionary for locale: ${locale}`);
     return await dictionaries[defaultLocale]();
   }
@@ -26,7 +26,7 @@ export async function getDictionary(locale: Locale): Promise<Dictionary> {
 // Helper function to get nested translation
 export function getTranslation(dict: Dictionary, key: string): string {
   const keys = key.split('.');
-  let value: any = dict;
+  let value: string | Dictionary = dict;
   
   for (const k of keys) {
     if (value && typeof value === 'object' && k in value) {

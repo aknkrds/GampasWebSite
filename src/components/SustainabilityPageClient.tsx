@@ -1,12 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { trackEvent } from '@/lib/analytics'
-
-interface SustainabilityPageClientProps {
-  dict: any
-}
 
 const sustainabilityData = {
   hero: {
@@ -144,7 +139,7 @@ const sustainabilityData = {
   }
 }
 
-export default function SustainabilityPageClient({ dict }: SustainabilityPageClientProps) {
+export default function SustainabilityPageClient() {
   const [activeTab, setActiveTab] = useState('commitment')
 
   const handleCertificateClick = (certificateName: string) => {

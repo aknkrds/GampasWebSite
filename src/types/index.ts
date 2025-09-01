@@ -76,7 +76,7 @@ export interface GTMEvent {
   action?: string;
   label?: string;
   value?: number;
-  [key: string]: any; // Allow additional properties
+  [key: string]: string | number | boolean | undefined; // Allow additional properties
 }
 
 // Navigation Types

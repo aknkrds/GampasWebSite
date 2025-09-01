@@ -6,8 +6,8 @@ export interface LocalizedText {
 }
 
 export interface LocalizedContent {
-  tr: any[]; // Rich text content
-  en: any[];
+  tr: SanityBlock[]; // Rich text content
+  en: SanityBlock[];
 }
 
 export interface Dimensions {
@@ -42,6 +42,12 @@ export interface SanityFile {
     _type: 'reference';
     url?: string;
   };
+}
+
+export interface SanityBlock {
+  _type: string;
+  _key: string;
+  [key: string]: unknown;
 }
 
 export interface SanityReference {

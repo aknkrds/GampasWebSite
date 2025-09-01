@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import { getDictionary } from '@/lib/i18n'
 import SustainabilityPageClient from '@/components/SustainabilityPageClient'
 
 export const metadata: Metadata = {
@@ -14,7 +13,5 @@ export const metadata: Metadata = {
 }
 
 export default async function SustainabilityPage() {
-  const dict = await getDictionary('tr')
-  
-  return <SustainabilityPageClient dict={dict} />
+  return <SustainabilityPageClient />
 }

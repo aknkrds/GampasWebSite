@@ -15,10 +15,6 @@ interface DocumentItem {
   category: string
 }
 
-interface DocumentsPageClientProps {
-  dict: any
-}
-
 const documents: DocumentItem[] = [
   {
     id: '1',
@@ -122,7 +118,7 @@ const documents: DocumentItem[] = [
   }
 ]
 
-export default function DocumentsPageClient({ dict }: DocumentsPageClientProps) {
+export default function DocumentsPageClient() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
 
@@ -199,6 +195,7 @@ export default function DocumentsPageClient({ dict }: DocumentsPageClientProps) 
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
+                  title="Belge kategorisi seçin"
                   className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white"
                 >
                   <option value="all">Tüm Belgeler</option>

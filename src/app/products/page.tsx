@@ -19,7 +19,9 @@ export default async function ProductsPage() {
   const dict = await getDictionary(locale);
 
   // Type assertions for nested dictionary access
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const products = dict.products as any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const common = dict.common as any;
 
   return (

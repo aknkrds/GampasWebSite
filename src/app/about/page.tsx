@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import { getDictionary } from '@/lib/i18n'
 import AboutPageClient from '@/components/AboutPageClient'
 
 export const metadata: Metadata = {
@@ -14,18 +13,11 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function AboutPage({
-  params: { lang = 'tr' },
-}: {
-  params: { lang?: string }
-}) {
-  const dict = await getDictionary(lang as 'tr' | 'en')
-
+export default async function AboutPage() {
   return (
     <AboutPageClient
       title="Hakkımızda"
       subtitle="40 yıldır metal ambalaj sektörünün öncü gücüyüz"
-      dict={dict}
     />
   )
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -25,7 +24,6 @@ import { trackEvent } from '@/lib/analytics'
 interface AboutPageClientProps {
   title: string
   subtitle: string
-  dict: any
 }
 
 interface TimelineItem {
@@ -130,7 +128,7 @@ const certificatesData = [
   'Geri Dönüşüm Sertifikası'
 ]
 
-export default function AboutPageClient({ title, subtitle, dict }: AboutPageClientProps) {
+export default function AboutPageClient({ title, subtitle }: AboutPageClientProps) {
   const [activeTab, setActiveTab] = useState<'story' | 'vision' | 'mission'>('story')
 
   const handleContactClick = () => {
@@ -163,11 +161,11 @@ export default function AboutPageClient({ title, subtitle, dict }: AboutPageClie
             <div className="flex flex-wrap justify-center gap-4">
               <Badge variant="secondary" className="text-lg px-4 py-2">
                 <Building2 className="h-5 w-5 mr-2" />
-                1982'den beri
+                1982&apos;den beri
               </Badge>
               <Badge variant="secondary" className="text-lg px-4 py-2">
                 <Globe className="h-5 w-5 mr-2" />
-                Türkiye'nin lideri
+                Türkiye&apos;nin lideri
               </Badge>
               <Badge variant="secondary" className="text-lg px-4 py-2">
                 <Leaf className="h-5 w-5 mr-2" />
@@ -229,7 +227,7 @@ export default function AboutPageClient({ title, subtitle, dict }: AboutPageClie
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Hikayemiz</h3>
                     <p className="text-gray-600 leading-relaxed mb-4">
-                      1982 yılında kurulan Gampaş Ambalaj San. Tic. A.Ş., 40 yılı aşkın süredir metal ambalaj sektöründe faaliyet göstermektedir. İstanbul'da 8000 m² kapalı alanda modern üretim tesisimizle, sektörün önde gelen firmalarından biri haline gelmiştik.
+                      1982 yılında kurulan Gampaş Ambalaj San. Tic. A.Ş., 40 yılı aşkın süredir metal ambalaj sektöründe faaliyet göstermektedir. İstanbul&apos;da 8000 m² kapalı alanda modern üretim tesisimizle, sektörün önde gelen firmalarından biri haline gelmiştik.
                     </p>
                     <p className="text-gray-600 leading-relaxed">
                       Yıllar içinde edindiğimiz deneyim ve sürekli yenilenen teknolojimizle, müşterilerimize en kaliteli ürünleri sunmaya devam ediyoruz. Fonksiyonel, yaratıcı, yenilikçi ve görsel çözümlerle markalarınıza değer katıyoruz.
@@ -240,7 +238,7 @@ export default function AboutPageClient({ title, subtitle, dict }: AboutPageClie
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Vizyonumuz</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Metal ambalaj sektöründe Türkiye'nin lider firması olmaya devam ederek, uluslararası pazarlarda da tanınan ve tercih edilen bir marka haline gelmek. Sürdürülebilir üretim anlayışımızla çevreye duyarlı, yenilikçi çözümler sunarak gelecek nesillere daha yaşanabilir bir dünya bırakmak.
+                      Metal ambalaj sektöründe Türkiye&apos;nin lider firması olmaya devam ederek, uluslararası pazarlarda da tanınan ve tercih edilen bir marka haline gelmek. Sürdürülebilir üretim anlayışımızla çevreye duyarlı, yenilikçi çözümler sunarak gelecek nesillere daha yaşanabilir bir dünya bırakmak.
                     </p>
                   </div>
                 )}

@@ -10,9 +10,13 @@ export default async function Home() {
   const dict = await getDictionary(locale);
 
   // Type assertions for nested dictionary access
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const hero = dict.hero as any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const products = dict.products as any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const sustainability = dict.sustainability as any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const footer = dict.footer as any;
 
   return (

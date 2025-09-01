@@ -4,8 +4,35 @@ import { Resend } from 'resend';
 // Initialize Resend with API key
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Contact form data interface
+interface ContactFormData {
+  name: string;
+  company: string;
+  email: string;
+  phone: string;
+  sector?: string;
+  productFamily?: string;
+  message: string;
+  consent: boolean;
+  recaptchaToken: string;
+  file: File | null;
+}
+
+// Email data interface
+interface EmailData {
+  from: string;
+  to: string;
+  subject: string;
+  html: string;
+  replyTo: string;
+  attachments?: Array<{
+    filename: string;
+    content: Buffer;
+  }>;
+}
+
 // Email template for contact form
-function createEmailTemplate(data: any) {
+function createEmailTemplate(data: ContactFormData) {
   return `
     <!DOCTYPE html>
     <html>
@@ -94,7 +121,7 @@ function isValidPhone(phone: string): boolean {
 function validateRecaptcha(token: string): boolean {
   // In real implementation, verify with Google reCAPTCHA API
   // For now, just check if token exists and starts with 'mock-'
-  return token && token.startsWith('mock-recaptcha-token-');
+  return Boolean(token && token.startsWith('mock-recaptcha-token-'));
 }
 
 export async function POST(request: NextRequest) {
@@ -165,7 +192,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Prepare email data
-    const emailData: any = {
+    const emailData: EmailData = {
       from: process.env.RESEND_FROM_EMAIL || 'noreply@gampas.net',
       to: process.env.RESEND_TO_EMAIL || 'info@gampas.net',
       subject: `Yeni İletişim Formu Mesajı - ${data.company}`,

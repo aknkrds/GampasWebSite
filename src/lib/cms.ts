@@ -13,16 +13,17 @@ import {
   Page,
   Media,
   QueryResult,
-  PaginatedResult,
   Language,
   Sector,
+  SanityBlock,
+  SanityImage,
 } from '@/types/cms';
 
 // Initialize image URL builder
 const builder = imageUrlBuilder(sanityClient);
 
 // Helper function to build image URLs
-export function urlFor(source: any) {
+export function urlFor(source: SanityImage | { _ref: string; _type: string } | string) {
   return builder.image(source);
 }
 
@@ -449,6 +450,7 @@ export async function getMediaFilesByTag(tag: string): Promise<QueryResult<Media
   try {
     const query = `*[_type == "media" && $tag in tags] | order(_createdAt desc)`;
     
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const data = await (sanityClient as any).fetch(query, { tag });
     return { data };
   } catch (error) {
@@ -462,12 +464,12 @@ export function getLocalizedText(text: { tr: string; en: string }, language: Lan
   return text[language] || text.tr || text.en || '';
 }
 
-export function getLocalizedContent(content: { tr: any[]; en: any[] }, language: Language): any[] {
-  return content[language] || content.tr || content.en || [];
+export function getLocalizedContent(content: { tr: SanityBlock[]; en: SanityBlock[] }, language: Language): SanityBlock[] {
+  return content[language] || content.tr || [];
 }
 
 // Search function
-export async function searchContent(searchTerm: string, language: Language = 'tr'): Promise<QueryResult<any[]>> {
+export async function searchContent(searchTerm: string, language: Language = 'tr'): Promise<QueryResult<(ProductFamily | ProductVariant | CaseStudy | Page)[]>> {
   try {
     const query = `
       *[
@@ -497,7 +499,7 @@ export async function searchContent(searchTerm: string, language: Language = 'tr
 }
 
 // Example usage function
-export async function getHomepageData(language: Language = 'tr') {
+export async function getHomepageData() {
   try {
     const [productFamiliesResult, certificatesResult, caseStudiesResult] = await Promise.all([
       getProductFamilies(),

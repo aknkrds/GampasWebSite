@@ -10,14 +10,15 @@ import { Button } from '@/components/ui/button';
 import { Download, Package, Ruler, Droplets } from 'lucide-react';
 
 interface ProductPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const { data: productFamily } = await getProductFamilyBySlug(params.slug);
+  const { slug } = await params;
+  const { data: productFamily } = await getProductFamilyBySlug(slug);
   
   if (!productFamily) {
     return buildMeta({
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     description: productFamily.description?.tr || `${productFamily.title.tr} ürün ailesi hakkında detaylı bilgi.`,
     type: 'website',
     image: productFamily.coverImage ? urlFor(productFamily.coverImage).width(1200).height(630).url() : undefined,
-    url: `/products/${params.slug}`
+    url: `/products/${slug}`
   });
 }
 
@@ -153,7 +154,8 @@ function RelatedSectorsSidebar({ sectors }: { sectors: string[] }) {
 
 export default async function ProductPage({ params }: ProductPageProps) {
   // Fetch product family data
-  const { data: productFamily, error: familyError } = await getProductFamilyBySlug(params.slug);
+  const { slug } = await params;
+  const { data: productFamily, error: familyError } = await getProductFamilyBySlug(slug);
   
   if (familyError || !productFamily) {
     notFound();

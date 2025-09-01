@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import DocumentsPageClient from '@/components/DocumentsPageClient'
-import { getDictionary } from '@/lib/i18n'
 
 export const metadata: Metadata = {
   title: 'Belgeler | Gampaş A.Ş. - Sertifikalar ve Kalite Belgeleri',
@@ -15,7 +14,5 @@ export const metadata: Metadata = {
 }
 
 export default async function DocumentsPage() {
-  const dict = await getDictionary('tr')
-  
-  return <DocumentsPageClient dict={dict} />
+  return <DocumentsPageClient />
 }

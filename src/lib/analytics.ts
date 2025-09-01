@@ -2,8 +2,8 @@
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gtag: (...args: unknown[]) => void;
+    dataLayer: unknown[];
   }
 }
 
@@ -12,7 +12,7 @@ export interface TrackEventParams {
   category: string;
   label?: string;
   value?: number;
-  custom_parameters?: Record<string, any>;
+  custom_parameters?: Record<string, string | number | boolean | undefined>;
 }
 
 export interface ConsentSettings {
@@ -52,7 +52,7 @@ export function initGoogleAnalytics(measurementId: string, defaultConsent?: Part
   // Initialize dataLayer
   window.dataLayer = window.dataLayer || [];
   
-  function gtag(...args: any[]) {
+  function gtag(...args: unknown[]) {
     window.dataLayer.push(args);
   }
   
@@ -124,7 +124,7 @@ export function trackPageView(url: string, title?: string): void {
   window.gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
     page_path: url,
     page_title: title || document.title,
-  });
+  } as Record<string, unknown>);
 
   console.log('Page view tracked:', { url, title });
 }
